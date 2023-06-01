@@ -1,0 +1,28 @@
+#include<stdio.h>
+main()
+{
+	int arr[]={23,45,12,89,55};
+	void sort(int[],int);
+	int i,j;
+	int len=sizeof(arr)/sizeof(int);
+	sort(arr,len);
+	for(i=0;i<len;i++)
+	printf("%d ",arr[i]);
+}
+void sort(int arr[],int len)
+{
+	int i,j,t;
+	for(i=0;i<len-1;i++)
+	{
+		for(j=i+1;j<len;j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				t=arr[i];
+				arr[i]=arr[j];
+				arr[j]=t;
+				
+			}
+		}
+	}
+}
